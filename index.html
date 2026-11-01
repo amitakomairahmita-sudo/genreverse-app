@@ -3,126 +3,261 @@
 <html lang="id">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>GENREVERSE</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GENREVERSE | Dunia Remaja</title>
 <style>
+:root{
+ --pink:#f5a9c8;--soft:#fff0f6;--deep:#bd6394;
+ --purple:#a58acb;--white:#fff;--text:#67485b;
+}
 *{box-sizing:border-box}
-body{margin:0;font-family:Arial,sans-serif;background:linear-gradient(145deg,#160d35,#38206a,#171331);color:white;min-height:100vh}
-header{text-align:center;padding:20px;border-bottom:1px solid #ffffff30}
-header h1{margin:0;color:#e0c1ff;letter-spacing:3px}
-header p{font-size:13px;color:#ddd}
-main{max-width:850px;margin:auto;padding:18px}
-h2{color:#e3caff}
-.home-title{text-align:center;padding:15px 0}
-.menu{display:grid;grid-template-columns:1fr 1fr;gap:13px;margin-top:20px}
-.card,.panel{background:#ffffff12;border:1px solid #ffffff35;border-radius:17px;padding:18px}
-.card{text-align:center;cursor:pointer}
-.card:active{transform:scale(.97)}
-.card .emoji{font-size:30px}
-.card h3{font-size:15px;color:#e5caff}
-.card p,.small{font-size:12px;color:#ddd;line-height:1.6}
-button{background:#a879e9;color:white;border:0;border-radius:10px;padding:11px 15px;cursor:pointer;font-weight:bold;margin:5px}
-.back{background:#ffffff25}
+body{
+ margin:0;font-family:"Trebuchet MS",Arial,sans-serif;
+ background:#fff7fb;color:var(--text);
+}
+header{
+ background:linear-gradient(120deg,#f8c5dc,#fff0f6);
+ padding:20px 14px;text-align:center;
+ border-bottom:2px solid #f7d8e7;
+}
+header h1{margin:0;color:#bd6394;letter-spacing:3px;font-size:27px}
+header p{margin:7px 0 0;font-size:12px;color:#805a70}
+main{max-width:850px;margin:auto;padding:17px}
 .page{display:none}
 .page.active{display:block}
-.panel{margin:12px 0}
-.panel h3{color:#e2c6ff}
-input[type=text]{width:100%;padding:13px;border-radius:10px;border:0;margin:10px 0;font-size:15px}
-.option{display:block;text-align:left;width:100%;background:#ffffff20;margin:8px 0}
-.chat{display:block;text-decoration:none;text-align:center;background:#25a75a;color:white;padding:15px;border-radius:12px;font-weight:bold;margin-top:18px}
-footer{text-align:center;color:#bbb;font-size:12px;padding:22px}
+.hero{
+ background:linear-gradient(135deg,#ffe2ef,#fff);
+ border:1px solid #f6c8dd;border-radius:23px;
+ padding:24px 17px;text-align:center;margin-bottom:20px;
+ box-shadow:0 5px 18px #e9b5ce35;
+}
+.hero h2{color:#bd6394;font-size:24px;margin:5px}
+.hero p{font-size:13px;line-height:1.7}
+.eyebrow{color:#bd6394;font-size:12px;font-weight:bold;letter-spacing:2px}
+.menu{
+ display:grid;grid-template-columns:1fr 1fr;gap:12px;
+}
+.card{
+ background:white;border:1px solid #f4c9dc;
+ border-radius:19px;padding:17px 10px;text-align:center;
+ cursor:pointer;box-shadow:0 4px 12px #e7b9d02b;
+}
+.card:active{transform:scale(.97)}
+.card .emoji{font-size:30px}
+.card h3{font-size:14px;color:#bd6394;margin:9px 0 5px}
+.card p{font-size:11px;line-height:1.5;color:#876b7b;margin:0}
+.panel{
+ background:white;border:1px solid #f3ccde;
+ border-radius:17px;padding:16px;margin:12px 0;
+ box-shadow:0 3px 12px #e7b9d022;
+}
+h2,h3{color:#bd6394}
+h2{font-size:22px}
+h3{font-size:16px}
+p{line-height:1.7}
+.small{font-size:13px;color:#806879;line-height:1.7}
+button,.back{
+ border:0;border-radius:12px;padding:11px 15px;
+ background:#e99abb;color:white;font-weight:bold;
+ cursor:pointer;margin:5px 3px;
+}
+.back{background:#f9dce9;color:#a6537f}
+.secondary{background:#eee3f8;color:#795d9b}
+input,select{
+ width:100%;padding:13px;border:1px solid #edc4d7;
+ border-radius:12px;background:#fffafd;color:#67485b;
+ margin:8px 0;font-size:14px;
+}
+.topic{cursor:pointer}
+.topic:hover{background:#fff4f8}
+.topic h3{margin:0}
+.topic p{font-size:12px;color:#806879;margin-bottom:0}
+.detail{display:none}
+.detail.active{display:block}
+.tag{
+ display:inline-block;background:#ffe6f0;color:#a6537f;
+ border-radius:20px;padding:5px 10px;font-size:11px;margin:3px;
+}
+.option{
+ display:block;width:100%;text-align:left;
+ background:#fff0f6;color:#80506a;border:1px solid #f2c7da;
+}
+.chat{
+ display:block;text-align:center;text-decoration:none;
+ background:#25a75a;color:white;padding:15px;
+ border-radius:13px;font-weight:bold;margin-top:15px;
+}
+footer{text-align:center;padding:25px;color:#a17d91;font-size:12px}
+.progress{font-weight:bold;color:#bd6394}
+@media(min-width:600px){
+ .menu{grid-template-columns:repeat(3,1fr)}
+}
 </style>
 </head>
 <body>
 <header>
-<h1>GENREVERSE</h1>
-<p>Know Yourself, Grow Your Future</p>
+ <h1>🌸 GENREVERSE 🌸</h1>
+ <p>Know Yourself, Grow Your Future</p>
 </header>
 
 <main>
+
+<!-- BERANDA -->
 <section id="home" class="page active">
-<div class="home-title">
-<h2>Selamat Datang di GENREVERSE!</h2>
-<p class="small">Ruang belajar remaja untuk mengenal diri, memahami kesehatan, dan merencanakan masa depan.</p>
-</div>
-<div class="menu">
-<div class="card" onclick="showPage('materi')"><div class="emoji">📚</div><h3>Materi Edukasi</h3><p>Pelajari informasi GenRe.</p></div>
-<div class="card" onclick="showPage('kamus')"><div class="emoji">📖</div><h3>Kamus GenRe</h3><p>Temukan istilah remaja.</p></div>
-<div class="card" onclick="showPage('kuis')"><div class="emoji">🧠</div><h3>Kuis GenRe</h3><p>Uji pengetahuanmu.</p></div>
-<div class="card" onclick="showPage('challenge')"><div class="emoji">🌱</div><h3>Challenge 30 Hari</h3><p>Bangun kebiasaan positif.</p></div>
-<div class="card" onclick="showPage('about')"><div class="emoji">👩‍💻</div><h3>Tentang Pembuat</h3><p>Kenali pengembang website.</p></div>
-<div class="card" onclick="showPage('admin')"><div class="emoji">💬</div><h3>Chat Admin</h3><p>Hubungi admin GENREVERSE.</p></div>
-</div>
-<div class="panel" style="text-align:center;margin-top:20px">
-<h3>Kenali Diri, Rencanakan Masa Depan</h3>
-<p class="small">Satu langkah kecil hari ini menjadi awal masa depan yang lebih baik.</p>
-</div>
+ <div class="hero">
+  <div class="eyebrow">WELCOME TO GENREVERSE</div>
+  <h2>Hai, Generasi Hebat! ♡</h2>
+  <p>Tempat belajar, mengenal diri, menemukan informasi,
+  dan merencanakan masa depan yang lebih baik.</p>
+  <span class="tag">Learn</span>
+  <span class="tag">Explore</span>
+  <span class="tag">Grow</span>
+ </div>
+ <h2 style="text-align:center">✨ Jelajahi Menu ✨</h2>
+ <div class="menu">
+  <div class="card" onclick="showPage('materi')">
+   <div class="emoji">📚</div><h3>Materi Edukasi</h3>
+   <p>Belajar berbagai topik kesehatan remaja.</p>
+  </div>
+  <div class="card" onclick="showPage('kamus')">
+   <div class="emoji">📖</div><h3>Kamus GenRe</h3>
+   <p>Kenali istilah dan maknanya.</p>
+  </div>
+  <div class="card" onclick="showPage('tentang')">
+   <div class="emoji">🌷</div><h3>Tentang GenRe</h3>
+   <p>Kenali program Generasi Berencana.</p>
+  </div>
+  <div class="card" onclick="showPage('kuis')">
+   <div class="emoji">🧠</div><h3>Kuis GenRe</h3>
+   <p>Uji pengetahuanmu.</p>
+  </div>
+  <div class="card" onclick="showPage('challenge')">
+   <div class="emoji">🎀</div><h3>Challenge 30 Hari</h3>
+   <p>Bangun kebiasaan positif.</p>
+  </div>
+  <div class="card" onclick="showPage('about')">
+   <div class="emoji">👩🏻‍💻</div><h3>Tentang Pembuat</h3>
+   <p>Kenali pengembang GENREVERSE.</p>
+  </div>
+  <div class="card" onclick="showPage('admin')">
+   <div class="emoji">💬</div><h3>Chat Admin</h3>
+   <p>Hubungi admin GENREVERSE.</p>
+  </div>
+ </div>
+ <div class="hero" style="margin-top:20px">
+  <h3>🌸 Your Future Starts Today!</h3>
+  <p>Kenali dirimu, tambah pengetahuanmu, dan persiapkan masa depanmu.</p>
+ </div>
 </section>
 
+<!-- MATERI -->
 <section id="materi" class="page">
-<button class="back" onclick="showPage('home')">← Beranda</button>
-<h2>📚 Materi Edukasi</h2>
-<div class="panel"><h3>Anemia</h3><p class="small">Kondisi ketika tubuh kekurangan sel darah merah sehat atau hemoglobin. Pencegahan mencakup makanan bergizi dan sumber zat besi.</p></div>
-<div class="panel"><h3>Stunting</h3><p class="small">Gangguan pertumbuhan akibat kekurangan gizi kronis dan faktor lain dalam jangka panjang.</p></div>
-<div class="panel"><h3>Kesehatan Reproduksi</h3><p class="small">Keadaan sehat secara fisik, mental, dan sosial yang berkaitan dengan sistem reproduksi.</p></div>
-<div class="panel"><h3>NAPZA</h3><p class="small">Narkotika, psikotropika, dan zat adiktif lainnya. Remaja perlu memahami risikonya dan menjauhi penyalahgunaan.</p></div>
-<div class="panel"><h3>Gizi Seimbang</h3><p class="small">Pola makan beragam dengan zat gizi sesuai kebutuhan tubuh, disertai aktivitas fisik dan kebiasaan sehat.</p></div>
-<div class="panel"><h3>Perencanaan Masa Depan</h3><p class="small">Menentukan tujuan pendidikan, mengenali potensi diri, dan merancang langkah meraih cita-cita.</p></div>
-<div class="panel"><h3>Kesehatan Mental</h3><p class="small">Kondisi yang membantu seseorang mengelola emosi, menghadapi tantangan, dan menjalin hubungan baik.</p></div>
-<div class="panel"><h3>Pendewasaan Usia Perkawinan</h3><p class="small">Mempersiapkan kesehatan, pendidikan, kematangan emosi, dan masa depan sebelum berkeluarga.</p></div>
+ <button class="back" onclick="showPage('home')">← Beranda</button>
+ <h2>📚 Materi Edukasi</h2>
+ <p class="small">Pilih materi yang ingin kamu pelajari. Setiap topik dilengkapi pengertian, faktor penyebab, dampak, dan langkah pencegahan.</p>
+ <div id="topicList"></div>
+ <div id="topicDetail" class="panel detail">
+  <button class="back" onclick="closeTopic()">← Daftar Materi</button>
+  <div id="topicContent"></div>
+ </div>
 </section>
 
+<!-- KAMUS -->
 <section id="kamus" class="page">
-<button class="back" onclick="showPage('home')">← Beranda</button>
-<h2>📖 Kamus GenRe</h2>
-<p class="small">Cari istilah seputar dunia remaja.</p>
-<input type="text" id="search" placeholder="Cari istilah..." oninput="searchTerms()">
-<div id="dictionary"></div>
+ <button class="back" onclick="showPage('home')">← Beranda</button>
+ <h2>📖 Kamus GenRe</h2>
+ <p class="small">Pilih kategori atau cari istilah yang ingin kamu ketahui.</p>
+ <select id="category" onchange="searchTerms()">
+  <option value="Semua">Semua Kategori</option>
+  <option value="Program GenRe">Program GenRe</option>
+  <option value="Kesehatan">Kesehatan</option>
+  <option value="Kehidupan Remaja">Kehidupan Remaja</option>
+ </select>
+ <input id="search" placeholder="🔎 Cari istilah..." oninput="searchTerms()">
+ <div id="dictionary"></div>
 </section>
 
+<!-- TENTANG GENRE -->
+<section id="tentang" class="page">
+ <button class="back" onclick="showPage('home')">← Beranda</button>
+ <h2>🌷 Mengenal GenRe</h2>
+ <div class="panel">
+  <h3>Apa itu GenRe?</h3>
+  <p class="small">GenRe adalah singkatan dari Generasi Berencana. GenRe merupakan program yang mendorong remaja untuk memiliki pengetahuan, sikap, dan perilaku positif dalam mempersiapkan kehidupan berkeluarga serta masa depan.</p>
+ </div>
+ <div class="panel">
+  <h3>🎯 Tujuan GenRe</h3>
+  <p class="small">Membantu remaja merencanakan pendidikan, karier, kehidupan berkeluarga, serta menghindari perilaku berisiko.</p>
+ </div>
+ <div class="panel">
+  <h3>💗 Mengapa GenRe Penting?</h3>
+  <p class="small">Remaja membutuhkan informasi yang benar agar mampu mengenali diri, membuat keputusan bertanggung jawab, dan mempersiapkan masa depan.</p>
+ </div>
+ <div class="panel">
+  <h3>🏡 Apa itu PIK-R?</h3>
+  <p class="small">PIK-R atau Pusat Informasi dan Konseling Remaja merupakan wadah kegiatan program GenRe yang menyediakan informasi dan layanan konseling bagi remaja.</p>
+ </div>
+ <div class="panel">
+  <h3>🌱 Peran Remaja</h3>
+  <p class="small">Menjadi teman sebaya yang positif, mencari informasi dari sumber tepercaya, mengembangkan potensi diri, dan menyebarkan edukasi yang bermanfaat.</p>
+ </div>
+ <div class="panel">
+  <h3>✨ Pesan GenRe</h3>
+  <p class="small">Remaja hari ini adalah generasi masa depan. Kenali dirimu, rencanakan masa depanmu, dan jadilah bagian dari perubahan positif!</p>
+ </div>
+</section>
+
+<!-- KUIS -->
 <section id="kuis" class="page">
-<button class="back" onclick="showPage('home')">← Beranda</button>
-<h2>🧠 Kuis GenRe</h2>
-<div class="panel">
-<p id="question"></p>
-<div id="answers"></div>
-<p id="result" class="small"></p>
-<button onclick="nextQuestion()">Soal Berikutnya →</button>
-</div>
+ <button class="back" onclick="showPage('home')">← Beranda</button>
+ <h2>🧠 Kuis GenRe</h2>
+ <p class="small">Jawab pertanyaan berikut untuk menguji pengetahuanmu.</p>
+ <div class="panel">
+  <p id="question"></p>
+  <div id="answers"></div>
+  <p id="result" class="small"></p>
+  <button onclick="nextQuestion()">Soal Berikutnya →</button>
+ </div>
 </section>
 
+<!-- CHALLENGE -->
 <section id="challenge" class="page">
-<button class="back" onclick="showPage('home')">← Beranda</button>
-<h2>🌱 Challenge 30 Hari</h2>
-<p class="small">Centang kegiatan positif yang sudah kamu lakukan.</p>
-<div class="panel"><div id="challengeList"></div><p id="progress" class="small"></p></div>
+ <button class="back" onclick="showPage('home')">← Beranda</button>
+ <h2>🎀 Challenge 30 Hari</h2>
+ <p class="small">Lakukan kegiatan positif dan tandai setelah selesai. Progres tersimpan di perangkatmu.</p>
+ <div class="panel">
+  <p id="progress" class="progress"></p>
+  <div id="challengeList"></div>
+ </div>
 </section>
 
+<!-- PEMBUAT -->
 <section id="about" class="page">
-<button class="back" onclick="showPage('home')">← Beranda</button>
-<h2>👩‍💻 Tentang Pembuat</h2>
-<div class="panel">
-<h3>GENREVERSE</h3>
-<p class="small">Media edukasi remaja untuk belajar dan merencanakan masa depan.</p>
-<p><b>Pembuat:</b> Amita Komairah</p>
-<p><b>Program:</b> Duta GenRe</p>
-<p class="small">Know Yourself, Grow Your Future.</p>
-</div>
+ <button class="back" onclick="showPage('home')">← Beranda</button>
+ <h2>👩🏻‍💻 Tentang Pembuat</h2>
+ <div class="panel">
+  <h3>GENREVERSE</h3>
+  <p class="small">GENREVERSE merupakan media edukasi digital yang dirancang untuk membantu remaja memperoleh informasi dan belajar tentang Generasi Berencana.</p>
+  <p><b>Pembuat:</b> Amita Komairah</p>
+  <p><b>Program:</b> Duta GenRe</p>
+  <p><b>Slogan:</b> Know Yourself, Grow Your Future</p>
+ </div>
 </section>
 
+<!-- CHAT ADMIN -->
 <section id="admin" class="page">
-<button class="back" onclick="showPage('home')">← Beranda</button>
-<h2>💬 Chat Admin</h2>
-<div class="panel">
-<h3>Butuh Informasi Lebih Lanjut?</h3>
-<p class="small">Silakan hubungi Admin GENREVERSE melalui WhatsApp jika ingin bertanya mengenai materi edukasi atau penggunaan website.</p>
-<a class="chat" href="https://wa.me/6285135801790?text=Halo%20Admin%20GENREVERSE%2C%20saya%20ingin%20bertanya." target="_blank" rel="noopener">💬 Hubungi Admin via WhatsApp</a>
-<p class="small">Pesan akan dibuka melalui aplikasi WhatsApp.</p>
-</div>
+ <button class="back" onclick="showPage('home')">← Beranda</button>
+ <h2>💬 Hubungi Admin</h2>
+ <div class="panel">
+  <h3>Butuh Bantuan?</h3>
+  <p class="small">Punya pertanyaan tentang materi GenRe atau penggunaan website? Hubungi admin melalui WhatsApp.</p>
+  <a class="chat" href="https://wa.me/6285135801790?text=Halo%20Admin%20GENREVERSE%2C%20saya%20ingin%20bertanya." target="_blank" rel="noopener">💬 Chat Admin WhatsApp</a>
+  <p class="small">WhatsApp akan terbuka untuk mengirim pesan kepada admin.</p>
+ </div>
 </section>
 </main>
 
-<footer>© 2026 GENREVERSE | Edukasi Remaja</footer>
+<footer>🌸 GENREVERSE © 2026 · Know Yourself, Grow Your Future 🌸</footer>
 
 <script>
 function showPage(id){
@@ -130,27 +265,63 @@ function showPage(id){
  document.getElementById(id).classList.add('active');
  window.scrollTo(0,0);
 }
+const topics=[
+["Anemia","Kesehatan","Anemia adalah kondisi ketika tubuh kekurangan sel darah merah sehat atau hemoglobin.","Kurangnya asupan zat besi, kebutuhan zat besi meningkat, dan beberapa kondisi kesehatan.","Tubuh dapat merasa lelah, lemah, pusing, dan sulit berkonsentrasi.","Konsumsi makanan sumber zat besi, makan beragam, dan periksakan diri jika mengalami keluhan."],
+["Stunting","Kesehatan","Stunting adalah gangguan pertumbuhan akibat kekurangan gizi kronis dan faktor lainnya, terutama pada awal kehidupan.","Asupan gizi tidak mencukupi, infeksi berulang, serta kondisi lingkungan dan kesehatan ibu dan anak.","Dapat memengaruhi pertumbuhan dan perkembangan anak.","Penuhi gizi sejak kehamilan, jaga kesehatan, dan pantau pertumbuhan anak."],
+["Kesehatan Reproduksi","Kesehatan","Kesehatan reproduksi adalah keadaan sehat secara fisik, mental, dan sosial terkait sistem reproduksi.","Kurangnya informasi, kebersihan yang kurang terjaga, dan perilaku berisiko.","Dapat berdampak pada kesehatan dan kualitas hidup.","Cari informasi tepercaya, jaga kebersihan diri, dan konsultasikan masalah kesehatan kepada tenaga kesehatan."],
+["NAPZA","Kesehatan","NAPZA adalah narkotika, psikotropika, dan zat adiktif lainnya.","Penyalahgunaan dapat berkaitan dengan tekanan teman sebaya, lingkungan, dan kurangnya informasi.","Dapat mengganggu kesehatan fisik, mental, pendidikan, dan hubungan sosial.","Berani menolak ajakan berisiko dan cari dukungan orang dewasa tepercaya."],
+["Gizi Seimbang","Kesehatan","Gizi seimbang adalah susunan makanan sehari-hari yang mengandung zat gizi sesuai kebutuhan tubuh.","Pola makan kurang beragam dan kebiasaan makan yang tidak teratur dapat membuat kebutuhan gizi tidak terpenuhi.","Tubuh mungkin tidak memperoleh zat gizi yang dibutuhkan.","Makan beragam, sertakan sayur dan buah, minum cukup, serta aktif bergerak."],
+["Kesehatan Mental","Kesehatan","Kesehatan mental berkaitan dengan kemampuan mengelola emosi, menghadapi tantangan, dan menjalin hubungan.","Tekanan belajar, masalah sosial, perubahan kehidupan, dan berbagai faktor lainnya.","Dapat memengaruhi suasana hati, konsentrasi, dan kegiatan sehari-hari.","Bercerita kepada orang tepercaya, beristirahat cukup, dan mencari bantuan profesional bila diperlukan."],
+["Perencanaan Masa Depan","Kehidupan Remaja","Perencanaan masa depan adalah proses menentukan tujuan dan langkah untuk meraih cita-cita.","Kurang mengenali minat, potensi, dan pilihan yang tersedia dapat membuat tujuan belum jelas.","Kesempatan belajar dan berkembang mungkin tidak dimanfaatkan secara optimal.","Kenali potensi diri, cari informasi pendidikan dan karier, lalu buat target bertahap."],
+["Pendewasaan Usia Perkawinan","Program GenRe","PUP merupakan upaya meningkatkan kesiapan kehidupan berkeluarga dari sisi pendidikan, kesehatan, mental, dan ekonomi.","Kurangnya pemahaman tentang kesiapan berkeluarga dan dampak perkawinan usia anak.","Keputusan yang belum matang dapat berdampak pada pendidikan, kesehatan, dan kesejahteraan.","Utamakan pendidikan, perkembangan diri, dan persiapan masa depan."]
+];
+function renderTopics(){
+ document.getElementById('topicList').innerHTML=topics.map((t,i)=>
+ `<div class="panel topic" onclick="openTopic(${i})"><span class="tag">${t[1]}</span><h3>${t[0]}　＋</h3><p>Ketuk untuk mempelajari lebih lanjut.</p></div>`).join('');
+}
+function openTopic(i){
+ let t=topics[i];
+ document.getElementById('topicList').style.display='none';
+ document.getElementById('topicDetail').classList.add('active');
+ document.getElementById('topicContent').innerHTML=
+ `<h2>${t[0]}</h2>
+ <h3>📌 Pengertian</h3><p class="small">${t[2]}</p>
+ <h3>🔎 Faktor penyebab</h3><p class="small">${t[3]}</p>
+ <h3>💡 Dampak</h3><p class="small">${t[4]}</p>
+ <h3>🌱 Pencegahan dan langkah positif</h3><p class="small">${t[5]}</p>
+ <p class="small">Catatan: Materi ini untuk edukasi. Untuk keluhan kesehatan pribadi, konsultasikan dengan tenaga kesehatan.</p>`;
+}
+function closeTopic(){
+ document.getElementById('topicDetail').classList.remove('active');
+ document.getElementById('topicList').style.display='block';
+}
+renderTopics();
 
 const terms=[
-["Anemia","Kondisi ketika tubuh kekurangan sel darah merah sehat atau hemoglobin."],
-["Stunting","Gangguan pertumbuhan akibat kekurangan gizi kronis dan faktor lainnya."],
-["GenRe","Generasi Berencana, program yang membantu remaja merencanakan masa depan."],
-["NAPZA","Narkotika, psikotropika, dan zat adiktif lainnya."],
-["PUP","Pendewasaan Usia Perkawinan."],
-["BKR","Bina Keluarga Remaja."],
-["PIK-R","Pusat Informasi dan Konseling Remaja."],
-["Kesehatan Reproduksi","Keadaan sehat secara fisik, mental, dan sosial terkait sistem reproduksi."],
-["Gizi Seimbang","Pola makan beragam dengan zat gizi sesuai kebutuhan."],
-["Kesehatan Mental","Keadaan yang mendukung seseorang mengelola emosi dan menghadapi tantangan."],
-["Perencanaan Masa Depan","Proses menentukan tujuan dan langkah meraih cita-cita."],
-["Pendewasaan Diri","Proses mengembangkan tanggung jawab dan kematangan diri."]
+["GenRe","Program GenRe","Generasi Berencana, program yang mendorong remaja mempersiapkan kehidupan dan masa depan."],
+["PIK-R","Program GenRe","Pusat Informasi dan Konseling Remaja, wadah informasi dan konseling bagi remaja."],
+["BKR","Program GenRe","Bina Keluarga Remaja, kegiatan untuk membantu keluarga mendampingi remaja."],
+["PUP","Program GenRe","Pendewasaan Usia Perkawinan, upaya meningkatkan kesiapan kehidupan berkeluarga."],
+["Triad KRR","Program GenRe","Tiga risiko kesehatan reproduksi remaja: seksualitas berisiko, HIV/AIDS, dan penyalahgunaan NAPZA."],
+["Anemia","Kesehatan","Kondisi ketika tubuh kekurangan sel darah merah sehat atau hemoglobin."],
+["Stunting","Kesehatan","Gangguan pertumbuhan akibat kekurangan gizi kronis dan faktor lainnya."],
+["NAPZA","Kesehatan","Narkotika, psikotropika, dan zat adiktif lainnya."],
+["Gizi Seimbang","Kesehatan","Pola konsumsi beragam dengan zat gizi sesuai kebutuhan tubuh."],
+["Kesehatan Reproduksi","Kesehatan","Keadaan sehat secara fisik, mental, dan sosial terkait sistem reproduksi."],
+["Kesehatan Mental","Kesehatan","Keadaan yang mendukung seseorang mengelola emosi dan menghadapi tantangan."],
+["Pubertas","Kehidupan Remaja","Masa perubahan fisik dan perkembangan menuju kematangan seksual."],
+["Pendewasaan Diri","Kehidupan Remaja","Proses mengembangkan tanggung jawab dan kematangan diri."],
+["Perencanaan Masa Depan","Kehidupan Remaja","Proses menentukan tujuan dan langkah untuk meraih cita-cita."],
+["Konseling","Program GenRe","Proses pemberian bantuan melalui percakapan untuk memahami masalah dan pilihan solusi."]
 ];
 function searchTerms(){
  let q=document.getElementById('search').value.toLowerCase();
- let found=terms.filter(t=>t[0].toLowerCase().includes(q));
+ let cat=document.getElementById('category').value;
+ let found=terms.filter(t=>(cat==='Semua'||t[1]===cat)&&
+ (t[0].toLowerCase().includes(q)||t[2].toLowerCase().includes(q)));
  document.getElementById('dictionary').innerHTML=found.length?
- found.map(t=>`<div class="panel"><h3>${t[0]}</h3><p class="small">${t[1]}</p></div>`).join(''):
- '<p class="small">Istilah belum ditemukan.</p>';
+ found.map(t=>`<div class="panel"><span class="tag">${t[1]}</span><h3>${t[0]}</h3><p class="small">${t[2]}</p></div>`).join(''):
+ '<p class="small">Istilah belum ditemukan. Coba kata kunci lain.</p>';
 }
 searchTerms();
 
@@ -206,10 +377,10 @@ const activities=[
 let completed=JSON.parse(localStorage.getItem('genreChallenge')||'[]');
 function renderChallenge(){
  document.getElementById('challengeList').innerHTML=activities.map((a,i)=>
- `<label style="display:block;padding:9px;border-bottom:1px solid #ffffff20">
+ `<label style="display:block;padding:9px;border-bottom:1px solid #f5d9e7">
  <input type="checkbox" style="width:auto;margin-right:8px" ${completed.includes(i)?'checked':''} onchange="toggleDay(${i},this.checked)">
  Hari ${i+1}: ${a}</label>`).join('');
- document.getElementById('progress').textContent='Progres: '+completed.length+' dari 30 hari selesai 🌱';
+ document.getElementById('progress').textContent='Progres: '+completed.length+' dari 30 hari selesai 🌸';
 }
 function toggleDay(i,checked){
  if(checked&&!completed.includes(i))completed.push(i);
@@ -221,5 +392,6 @@ renderChallenge();
 </script>
 </body>
 </html>
+
 
 
