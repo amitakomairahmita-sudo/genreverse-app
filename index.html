@@ -1,0 +1,249 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GENREVERSE | Ruang Tumbuh Remaja</title>
+<style>
+*{box-sizing:border-box}
+body{
+ margin:0;font-family:Arial,sans-serif;
+ background:#f4f5ff;color:#20294b;
+}
+header{
+ background:linear-gradient(135deg,#29265e,#6854a8);
+ color:white;padding:25px 20px 35px;
+ border-radius:0 0 28px 28px;
+}
+nav{display:flex;justify-content:space-between;align-items:center}
+.logo{font-weight:bold;font-size:21px;letter-spacing:1px}
+nav a{color:white;text-decoration:none;font-size:12px}
+.hero{padding:40px 0 15px}
+.hero small{color:#d8ceff;letter-spacing:2px}
+.hero h1{font-size:36px;margin:12px 0}
+.hero p{line-height:1.6;color:#eee9ff}
+.btn{
+ display:inline-block;background:#f4c9e7;color:#392c65;
+ border:0;border-radius:20px;padding:12px 20px;
+ font-weight:bold;cursor:pointer;text-decoration:none;
+}
+main{padding:22px 17px}
+h2{font-size:21px}
+.intro{color:#69708a;font-size:14px;line-height:1.6}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.card{
+ background:white;padding:17px;border-radius:17px;
+ box-shadow:0 4px 15px #2222220c;
+}
+.card h3{font-size:15px;margin:10px 0}
+.card p{font-size:12px;line-height:1.5;color:#727991}
+.emoji{font-size:28px}
+.section{margin-top:30px}
+.quizbox{
+ background:white;padding:18px;border-radius:18px;
+ box-shadow:0 4px 15px #2222220c;
+}
+button.option{
+ display:block;width:100%;text-align:left;
+ padding:12px;margin:9px 0;border:1px solid #dedcf1;
+ background:#faf9ff;border-radius:12px;color:#29294c;
+ cursor:pointer;
+}
+button.option:hover{background:#eee9ff}
+#feedback{font-size:14px;font-weight:bold;margin-top:12px}
+.challenge{
+ display:flex;gap:10px;align-items:center;
+ background:white;padding:13px;border-radius:12px;
+ margin:9px 0;font-size:13px;
+}
+.challenge input{width:18px;height:18px;accent-color:#6854a8}
+.progress{
+ background:#e2def2;height:10px;border-radius:20px;
+ overflow:hidden;margin:12px 0;
+}
+#bar{height:100%;width:0;background:#745db6;transition:.3s}
+.creator{
+ background:linear-gradient(135deg,#29265e,#6854a8);
+ color:white;padding:23px;border-radius:20px;
+ line-height:1.7;
+}
+footer{text-align:center;padding:25px;color:#77748c;font-size:12px}
+</style>
+</head>
+<body>
+
+<header>
+<nav>
+<div class="logo">✦ GENREVERSE</div>
+<a href="#materi">EXPLORE ↓</a>
+</nav>
+<div class="hero">
+<small>YOUR FUTURE STARTS HERE</small>
+<h1>Welcome to<br>GENREVERSE!</h1>
+<p>Ruang edukasi dan eksplorasi remaja untuk mengenal diri, menjaga kesehatan, dan merencanakan masa depan.</p>
+<a href="#materi" class="btn">Mulai Jelajahi ✨</a>
+</div>
+</header>
+
+<main>
+<section id="materi">
+<h2>✦ Explore Your Knowledge</h2>
+<p class="intro">Kenali dirimu melalui berbagai informasi penting tentang dunia remaja.</p>
+
+<div class="grid">
+<div class="card">
+<div class="emoji">🩸</div>
+<h3>Anemia</h3>
+<p>Kenali penyebab, tanda, pencegahan, dan pentingnya tablet tambah darah.</p>
+</div>
+<div class="card">
+<div class="emoji">🌱</div>
+<h3>Stunting</h3>
+<p>Pahami pentingnya gizi dan kesehatan untuk mencegah stunting.</p>
+</div>
+<div class="card">
+<div class="emoji">💗</div>
+<h3>Kesehatan Remaja</h3>
+<p>Pelajari kesehatan reproduksi, pubertas, dan menjaga diri.</p>
+</div>
+<div class="card">
+<div class="emoji">🚀</div>
+<h3>Perencanaan Masa Depan</h3>
+<p>Bangun impian, pendidikan, dan rencana kehidupan yang positif.</p>
+</div>
+</div>
+</section>
+
+<section class="section">
+<h2>🧠 GENRE QUIZ</h2>
+<p class="intro">Uji pengetahuanmu melalui kuis singkat!</p>
+<div class="quizbox">
+<p id="question">Apa kepanjangan dari GenRe?</p>
+<div id="options"></div>
+<div id="feedback"></div>
+<button class="btn" onclick="nextQuestion()" id="next" style="display:none">Soal Berikutnya →</button>
+<p id="score"></p>
+</div>
+</section>
+
+<section class="section">
+<h2>🌟 30 DAYS OF GROWTH</h2>
+<p class="intro">Bangun kebiasaan positif sedikit demi sedikit. Tandai kegiatan yang sudah kamu lakukan.</p>
+<div class="progress"><div id="bar"></div></div>
+<p id="count">0 dari 30 tantangan selesai</p>
+<div id="challenges"></div>
+</section>
+
+<section class="section" id="creator">
+<div class="creator">
+<h2>✦ Behind GENREVERSE</h2>
+<p>GENREVERSE merupakan platform edukasi remaja yang dibuat untuk meningkatkan pengetahuan, kesadaran, dan semangat generasi muda dalam mempersiapkan masa depan.</p>
+<p><b>Creator:</b> Amita Komairah</p>
+<p><b>Program:</b> Duta GenRe</p>
+<p><b>Tagline:</b> Know Yourself, Grow Your Future.</p>
+</div>
+</section>
+</main>
+
+<footer>
+© 2026 GENREVERSE · Learn Today, Lead Tomorrow ✨
+</footer>
+
+<script>
+const questions=[
+{q:"Apa kepanjangan dari GenRe?",o:["Generasi Remaja","Generasi Berencana","Gerakan Remaja"],a:1},
+{q:"Apa salah satu cara mencegah anemia?",o:["Menghindari sayuran","Makan bergizi dan konsumsi TTD sesuai anjuran","Tidak sarapan"],a:1},
+{q:"Apa yang dimaksud dengan stunting?",o:["Gangguan pertumbuhan akibat kekurangan gizi kronis","Penyakit kulit","Gangguan penglihatan"],a:0},
+{q:"Mengapa remaja perlu merencanakan masa depan?",o:["Agar lebih siap mencapai cita-cita","Agar tidak perlu belajar","Supaya mengikuti teman"],a:0},
+{q:"Apa contoh menjaga kesehatan reproduksi?",o:["Menjaga kebersihan diri","Mengabaikan kebersihan","Menyebarkan informasi pribadi"],a:0}
+];
+
+let current=0, points=0, answered=false;
+
+function showQuestion(){
+ answered=false;
+ document.getElementById("question").textContent=questions[current].q;
+ document.getElementById("feedback").textContent="";
+ document.getElementById("next").style.display="none";
+ document.getElementById("score").textContent="";
+ const box=document.getElementById("options");
+ box.innerHTML="";
+ questions[current].o.forEach((option,i)=>{
+  const b=document.createElement("button");
+  b.className="option";
+  b.textContent=option;
+  b.onclick=()=>checkAnswer(i);
+  box.appendChild(b);
+ });
+}
+function checkAnswer(i){
+ if(answered)return;
+ answered=true;
+ if(i===questions[current].a){
+  points++;
+  document.getElementById("feedback").textContent="Benar! Hebat! ✨";
+ }else{
+  document.getElementById("feedback").textContent="Belum tepat. Yuk pelajari lagi! 💗";
+ }
+ document.getElementById("score").textContent="Skor: "+points;
+ document.getElementById("next").style.display="inline-block";
+}
+function nextQuestion(){
+ current++;
+ if(current>=questions.length){
+  document.getElementById("question").textContent="Kuis selesai! 🎉";
+  document.getElementById("options").innerHTML="";
+  document.getElementById("feedback").textContent="Kamu menjawab benar "+points+" dari "+questions.length+" soal.";
+  document.getElementById("next").textContent="Ulangi Kuis";
+  document.getElementById("next").onclick=()=>{
+   current=0;points=0;
+   document.getElementById("next").textContent="Soal Berikutnya →";
+   document.getElementById("next").onclick=nextQuestion;
+   showQuestion();
+  };
+  return;
+ }
+ showQuestion();
+}
+showQuestion();
+
+const tasks=[
+"Kenali satu potensi dirimu","Minum air putih yang cukup",
+"Belajar hal baru","Rapikan tempat belajar",
+"Baca informasi kesehatan","Buat daftar cita-cita",
+"Makan buah hari ini","Berolahraga ringan sesuai kemampuan",
+"Belajar mengatur waktu","Jaga kebersihan diri",
+"Tulis satu hal yang disyukuri","Kurangi waktu layar sebelum tidur",
+"Pelajari tentang anemia","Bantu orang tua",
+"Kenali tanda stres dan cara mencari bantuan",
+"Pelajari tentang stunting","Buat target belajar",
+"Berani mengatakan tidak pada ajakan berisiko",
+"Jaga pola tidur","Baca buku atau artikel edukatif",
+"Pelajari kesehatan reproduksi","Hargai perbedaan",
+"Susun rencana masa depan","Berbagi informasi positif",
+"Luangkan waktu bersama keluarga","Evaluasi kebiasaan baik",
+"Belajar keterampilan baru","Kenali lingkungan pertemanan sehat",
+"Tulis perkembangan dirimu","Rayakan usaha dan pencapaianmu"
+];
+
+const area=document.getElementById("challenges");
+tasks.forEach((task,i)=>{
+ const label=document.createElement("label");
+ label.className="challenge";
+ const input=document.createElement("input");
+ input.type="checkbox";
+ input.onchange=updateProgress;
+ const span=document.createElement("span");
+ span.textContent="Hari "+(i+1)+": "+task;
+ label.append(input,span);
+ area.appendChild(label);
+});
+function updateProgress(){
+ const total=document.querySelectorAll(".challenge input:checked").length;
+ document.getElementById("bar").style.width=(total/30*100)+"%";
+ document.getElementById("count").textContent=total+" dari 30 tantangan selesai";
+}
+</script>
+</body>
+</html>
